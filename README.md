@@ -5,9 +5,9 @@ It also implements the `globalSearch` capability to integrate with the platform 
 Datasets are currently (partially) mapped to a DCAT representation, and exported as a `ttl` file.
 
 ## Authors
-    - Pranjali Singh (pranjali.singh@iwm.fraunhofer.de)
-    - Pablo de Andres (pablo.de.andres@iwm.fraunhofer.de)
-    - José Manuel Domínguez (jose.manuel.dominguez@iwm.fraunhofer.de)
+- Pranjali Singh (pranjali.singh@iwm.fraunhofer.de)
+- Pablo de Andres (pablo.de.andres@iwm.fraunhofer.de)
+- José Manuel Domínguez (jose.manuel.dominguez@iwm.fraunhofer.de)
 
 ## Deployment
 An instance of this app can be deployed by running on this root folder:
