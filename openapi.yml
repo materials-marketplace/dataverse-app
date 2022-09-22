@@ -1,0 +1,114 @@
+openapi: 3.0.0
+
+info:
+  title: Dataverse app
+  description: App to query a dataverse instance
+  version: 0.0.1
+  x-products:
+    - name: Single product
+servers:
+  - url: https://dataverse-app.herokuapp.com
+
+paths:
+  /heartbeat:
+    get:
+      security:
+        - bearerAuth: []
+      description: Check if the application is active
+      operationId: heartbeat
+      responses:
+        '200':
+          description: Success
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+
+  /dataset:
+    get:
+      security:
+        - bearerAuth: []
+      description: Fetches list of datasets
+      operationId: getCollection
+      responses:
+        '200':
+          description: Success
+        '404':
+          description: Not found
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+
+  /dataset/{datasetId}:
+    get:
+      security:
+        - bearerAuth: []
+      description: Fetches a particular Dataset
+      operationId: getDataset
+      parameters:
+        - in: path
+          name: datasetId
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            "*/*":
+              schema:
+                type: object
+        '404':
+          description: Not found
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+
+  /metadata/{datasetId}:
+    get:
+      security:
+        - bearerAuth: []
+      description: fetch information about certain sets of data
+      operationId: getMetadata
+      parameters:
+        - in: path
+          name: datasetId
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            "*/*":
+              schema:
+                type: object
+        '404':
+          description: Not found
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+
+  /globalSearch:
+    get:
+      security:
+        - bearerAuth: []
+      summary: GlobalSearch
+      description: globalSearch
+      operationId: globalSearch
+      parameters:
+        - in: query
+          name: q
+          schema:
+            type: string
+          required: true
+      responses:
+        "200":
+          description: Successful Response
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  responses:
+    UnauthorizedError:
+      description: Access token is missing or invalid

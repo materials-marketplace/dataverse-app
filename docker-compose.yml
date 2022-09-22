@@ -1,0 +1,8 @@
+version: "3.6"
+
+services:
+
+  dataverse_app:
+    build: .
+    ports:
+      - 8080:8080

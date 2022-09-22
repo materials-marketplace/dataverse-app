@@ -1,0 +1,168 @@
+{
+  "authority": "10.15454",
+  "id": 1139,
+  "identifier": "1.4938214986156548E12",
+  "latestVersion": {
+    "createTime": "2019-01-28T18:54:24Z",
+    "datasetId": 1139,
+    "datasetPersistentId": "doi:10.15454/1.4938214986156548E12",
+    "distributionDate": "2017",
+    "fileAccessRequest": false,
+    "files": [],
+    "id": 174489,
+    "lastUpdateTime": "2019-01-28T18:54:24Z",
+    "license": "NONE",
+    "metadataBlocks": {
+      "citation": {
+        "displayName": "Common Metadata",
+        "fields": [
+          {
+            "multiple": false,
+            "typeClass": "primitive",
+            "typeName": "title",
+            "value": "INRA:Quercus petraea:399"
+          },
+          {
+            "multiple": false,
+            "typeClass": "primitive",
+            "typeName": "alternativeURL",
+            "value": "https://urgi.versailles.inra.fr/siregal/siregal/card.do?id=78182&dbName=common&className=genres.accession.AccessionImpl"
+          },
+          {
+            "multiple": true,
+            "typeClass": "compound",
+            "typeName": "datasetContact",
+            "value": [
+              {
+                "datasetContactAffiliation": {
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "typeName": "datasetContactAffiliation",
+                  "value": "www.inra.fr"
+                },
+                "datasetContactEmail": {
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "typeName": "datasetContactEmail",
+                  "value": "cyril.pommier@inra.fr"
+                },
+                "datasetContactName": {
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "typeName": "datasetContactName",
+                  "value": "Rinnova"
+                }
+              }
+            ]
+          },
+          {
+            "multiple": true,
+            "typeClass": "compound",
+            "typeName": "author",
+            "value": [
+              {
+                "authorName": {
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "typeName": "authorName",
+                  "value": "GnpIS"
+                }
+              }
+            ]
+          },
+          {
+            "multiple": false,
+            "typeClass": "primitive",
+            "typeName": "distributionDate",
+            "value": "2017"
+          },
+          {
+            "multiple": true,
+            "typeClass": "compound",
+            "typeName": "dsDescription",
+            "value": [
+              {
+                "dsDescriptionValue": {
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "typeName": "dsDescriptionValue",
+                  "value": "value unavailable"
+                }
+              }
+            ]
+          },
+          {
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "typeName": "language",
+            "value": [
+              "English"
+            ]
+          },
+          {
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "typeName": "subject",
+            "value": [
+              "Medicine, Health and Life Sciences"
+            ]
+          },
+          {
+            "multiple": true,
+            "typeClass": "compound",
+            "typeName": "topicClassification",
+            "value": [
+              {
+                "topicClassValue": {
+                  "multiple": false,
+                  "typeClass": "primitive",
+                  "typeName": "topicClassValue",
+                  "value": "Genetic Resource"
+                }
+              }
+            ]
+          },
+          {
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "typeName": "kindOfData",
+            "value": [
+              "Physical Object"
+            ]
+          },
+          {
+            "multiple": true,
+            "typeClass": "primitive",
+            "typeName": "kindOfDataOther",
+            "value": [
+              "Genetic Resource"
+            ]
+          },
+          {
+            "multiple": false,
+            "typeClass": "primitive",
+            "typeName": "notesText",
+            "value": "format:application/xml"
+          },
+          {
+            "multiple": false,
+            "typeClass": "primitive",
+            "typeName": "depositor",
+            "value": "Rinnova"
+          }
+        ]
+      }
+    },
+    "releaseTime": "2019-01-28T18:54:24Z",
+    "storageIdentifier": "normal-upload://10.15454/1.4938214986156548E12",
+    "termsOfUse": "<a href=\"https://creativecommons.org/licenses/by/3.0/\">CC BY</a>",
+    "versionMinorNumber": 0,
+    "versionNumber": 4,
+    "versionState": "RELEASED"
+  },
+  "persistentUrl": "https://doi.org/10.15454/1.4938214986156548E12",
+  "protocol": "doi",
+  "publicationDate": "2018-01-25",
+  "publisher": "Portail Data INRAE",
+  "storageIdentifier": "normal-upload://10.15454/1.4938214986156548E12"
+}
