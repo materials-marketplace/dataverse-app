@@ -29,7 +29,7 @@ from rdflib.term import Identifier
 # TODO: consider validating at some point the created DCAT with PySHACL.
 
 # Custom type hints.
-Triple = tuple[Identifier, Identifier, Identifier]
+Triple = tuple(Identifier, Identifier, Identifier)
 # Pattern = tuple[Optional[Identifier], Optional[Identifier],
 #                 Optional[Identifier]]
 JSON = Any  # Placeholder for JSON type hint.
