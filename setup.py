@@ -22,4 +22,7 @@ setup(
         "jsonpath-ng",
         "pycountry",  # For handling ISO 639-1 and ISO 639-2 language codes.
     ],
+    tests_require=[
+        "pytest==7.1.2",
+    ],
 )
