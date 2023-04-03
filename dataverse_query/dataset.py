@@ -636,7 +636,6 @@ class Dataset:
         """
         triples = set()
         for author in doc["value"]:
-
             author_name = (
                 author["authorName"]["value"] if "authorName" in author else None
             )
@@ -838,7 +837,6 @@ class Dataset:
             #  content', the three-letter code should be used.
             result = None
             for name in names:
-
                 if name.lower() in {
                     "No linguistic content".lower(),
                     "Not applicable".lower(),
