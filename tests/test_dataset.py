@@ -15,8 +15,8 @@ class DatasetTest(TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         """Create a query and execute it to get a sample dataset."""
-        dq = DataverseQuery("https://entrepot.recherche.data.gouv.fr/dataverse/inrae")
-        cls.response = dq.get_dataset("doi:10.15454/1.4938214986156548E12")
+        dq = DataverseQuery("https://entrepot.recherche.data.gouv.fr")
+        cls.response = dq.get_dataset("doi:10.15454/DOWA7X")
 
     def setUp(self) -> None:
         """For each test, save the sample dataset the `self.dataset`."""

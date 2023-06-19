@@ -6,7 +6,7 @@ RUN pip install --upgrade pip
 WORKDIR /app
 
 ENV FLASK_APP=app.py
-ENV PORT=5000
+ENV PORT=8080
 
 ADD . .
 RUN pip install .
