@@ -29,7 +29,7 @@ from rdflib.term import Identifier
 # TODO: consider validating at some point the created DCAT with PySHACL.
 
 # Custom type hints.
-Triple = tuple[Identifier, Identifier, Identifier]
+Triple = [Identifier, Identifier, Identifier]
 # Pattern = tuple[Optional[Identifier], Optional[Identifier],
 #                 Optional[Identifier]]
 JSON = Any  # Placeholder for JSON type hint.
@@ -500,7 +500,7 @@ class Dataset:
             The triples representing the dataset entity.
         """
         self.identifiers["dataset"] = (dataset := BNode())
-
+        print(doc["latestVersion"])
         # Find URL in license, if not strip HTML.
         license_string = doc["latestVersion"]["termsOfUse"]
         if match := rfc3987.search(license_string):
@@ -636,7 +636,6 @@ class Dataset:
         """
         triples = set()
         for author in doc["value"]:
-
             author_name = (
                 author["authorName"]["value"] if "authorName" in author else None
             )
@@ -838,7 +837,6 @@ class Dataset:
             #  content', the three-letter code should be used.
             result = None
             for name in names:
-
                 if name.lower() in {
                     "No linguistic content".lower(),
                     "Not applicable".lower(),

@@ -7,39 +7,33 @@ info:
   x-products:
     - name: Single product
 servers:
-  - url: https://dataverse-app.herokuapp.com
+  - url: https://dataverse.materials-data.space
 
 paths:
   /heartbeat:
     get:
-      security:
-        - bearerAuth: []
       description: Check if the application is active
       operationId: heartbeat
       responses:
-        '200':
+        "200":
           description: Success
-        '401':
-          $ref: '#/components/responses/UnauthorizedError'
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
 
   /dataset:
     get:
-      security:
-        - bearerAuth: []
       description: Fetches list of datasets
       operationId: getCollection
       responses:
-        '200':
+        "200":
           description: Success
-        '404':
+        "404":
           description: Not found
-        '401':
-          $ref: '#/components/responses/UnauthorizedError'
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
 
   /dataset/{datasetId}:
     get:
-      security:
-        - bearerAuth: []
       description: Fetches a particular Dataset
       operationId: getDataset
       parameters:
@@ -49,21 +43,19 @@ paths:
             type: string
           required: true
       responses:
-        '200':
+        "200":
           description: Success
           content:
             "*/*":
               schema:
                 type: object
-        '404':
+        "404":
           description: Not found
-        '401':
-          $ref: '#/components/responses/UnauthorizedError'
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
 
   /metadata/{datasetId}:
     get:
-      security:
-        - bearerAuth: []
       description: fetch information about certain sets of data
       operationId: getMetadata
       parameters:
@@ -73,21 +65,19 @@ paths:
             type: string
           required: true
       responses:
-        '200':
+        "200":
           description: Success
           content:
             "*/*":
               schema:
                 type: object
-        '404':
+        "404":
           description: Not found
-        '401':
-          $ref: '#/components/responses/UnauthorizedError'
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
 
   /globalSearch:
     get:
-      security:
-        - bearerAuth: []
       summary: GlobalSearch
       description: globalSearch
       operationId: globalSearch
@@ -100,15 +90,10 @@ paths:
       responses:
         "200":
           description: Successful Response
-        '401':
-          $ref: '#/components/responses/UnauthorizedError'
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
 
 components:
-  securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
   responses:
     UnauthorizedError:
       description: Access token is missing or invalid

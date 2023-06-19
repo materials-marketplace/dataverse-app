@@ -44,7 +44,7 @@ def getDataset(datasetId: str):
 def getMetadata(datasetId: str):
     logging.info(f"Request for dataset's {datasetId} metadata.")
     dataset = Dataset(dq.get_dataset_metadata(datasetId))
-    filename = "".join(i for i in datasetId if i not in "\/:*?<>|") + ".ttl"
+    filename = "".join(i for i in datasetId if i not in "\\/:*?<>|") + ".ttl"
     dataset.to_dcat_file(filename)
     return send_file(filename)
 
