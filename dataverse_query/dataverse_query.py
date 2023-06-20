@@ -27,15 +27,6 @@ class DataverseQuery:
         Returns:
             Response: Response to the query
         """
-        # NOTE: temporary hack to fix the weak DH-Key ssl issue with dataverse url
-        requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += "HIGH:!DH:!aNULL"
-        try:
-            requests.packages.urllib3.contrib.pyopenssl.DEFAULT_SSL_CIPHER_LIST += (
-                "HIGH:!DH:!aNULL"
-            )
-        except AttributeError:
-            # no pyopenssl support used / needed / available
-            pass
         r = requests.get(url, params=payload, verify=False)
         r.raise_for_status()
         return r
