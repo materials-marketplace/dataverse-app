@@ -40,7 +40,7 @@ def getDataset(datasetId: str):
     return make_response(file)
 
 
-@app.route("/metadata/<path:datasetId>", methods=["GET"])
+@app.route("/metadata/<path:datasetId>", methods=["HEAD"])
 def getMetadata(datasetId: str):
     logging.info(f"Request for dataset's {datasetId} metadata.")
     dataset = Dataset(dq.get_dataset_metadata(datasetId))

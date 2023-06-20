@@ -6,6 +6,7 @@ info:
   version: 0.0.1
   x-products:
     - name: Single product
+  x-api-version: 0.4.0
 servers:
   - url: https://dataverse.materials-data.space
 
@@ -15,22 +16,22 @@ paths:
       description: Check if the application is active
       operationId: heartbeat
       responses:
-        "200":
+        '200':
           description: Success
-        "401":
-          $ref: "#/components/responses/UnauthorizedError"
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
 
   /dataset:
     get:
       description: Fetches list of datasets
-      operationId: getCollection
+      operationId: listDatasets
       responses:
-        "200":
+        '200':
           description: Success
-        "404":
+        '404':
           description: Not found
-        "401":
-          $ref: "#/components/responses/UnauthorizedError"
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
 
   /dataset/{datasetId}:
     get:
@@ -43,21 +44,21 @@ paths:
             type: string
           required: true
       responses:
-        "200":
+        '200':
           description: Success
           content:
             "*/*":
               schema:
                 type: object
-        "404":
+        '404':
           description: Not found
-        "401":
-          $ref: "#/components/responses/UnauthorizedError"
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
 
   /metadata/{datasetId}:
-    get:
+    head:
       description: fetch information about certain sets of data
-      operationId: getMetadata
+      operationId: getDatasetMetadata
       parameters:
         - in: path
           name: datasetId
@@ -65,16 +66,16 @@ paths:
             type: string
           required: true
       responses:
-        "200":
+        '200':
           description: Success
           content:
             "*/*":
               schema:
                 type: object
-        "404":
+        '404':
           description: Not found
-        "401":
-          $ref: "#/components/responses/UnauthorizedError"
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
 
   /globalSearch:
     get:
@@ -90,8 +91,8 @@ paths:
       responses:
         "200":
           description: Successful Response
-        "401":
-          $ref: "#/components/responses/UnauthorizedError"
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
 
 components:
   responses:
