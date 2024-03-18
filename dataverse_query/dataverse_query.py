@@ -1,4 +1,5 @@
 """Query dataverse via its API."""
+
 from typing import Dict
 from urllib.parse import urljoin
 
